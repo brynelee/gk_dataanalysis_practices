@@ -5,6 +5,12 @@ __pycache__/
 _libs
 *.pyx
 
+# idea
+.idea/
+
+# macOS desktop configuration file
+.DS_Store
+
 # C extensions
 *.so
 
