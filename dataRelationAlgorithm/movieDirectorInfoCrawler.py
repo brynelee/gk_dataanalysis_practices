@@ -9,7 +9,7 @@ driver = webdriver.Chrome(executable_path="/Users/xiaodong/drivers/chromedriver"
 # 设置想要下载的导演 数据集
 director = u'宁浩'
 # 写 CSV 文件
-file_name = './dataRelationAlgorithm/' + director + '.csv'
+file_name = './dataRelationAlgorithm/' + director + '2.csv'
 base_url = 'https://movie.douban.com/subject_search?search_text='+director+'&cat=1002&start='
 out = open(file_name,'w', newline='', encoding='utf-8-sig')
 csv_write = csv.writer(out, dialect='excel')
