@@ -8,6 +8,9 @@ _libs
 # idea
 .idea/
 
+# vscode
+.vscode/
+
 # macOS desktop configuration file
 .DS_Store
 
