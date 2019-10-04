@@ -18,7 +18,7 @@ import xdtools
 
 # 数据加载
 # data = data = pd.read_csv('../../tools/gk-data-analysis/credit_default/UCI_Credit_Card.csv')
-data = data = pd.read_csv('/Users/xiaodong/Gitroot/tools/gk-data-analysis/credit_default/UCI_Credit_Card.csv')
+data = data = pd.read_csv('../tools/gk-data-analysis/credit_default/UCI_Credit_Card.csv')
 # 数据探索
 print(data.shape)  # 查看数据集大小
 print(data.describe())  # 数据集概览
