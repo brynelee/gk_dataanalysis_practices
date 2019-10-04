@@ -9,7 +9,7 @@ from itertools import product
 from datetime import datetime
 warnings.filterwarnings('ignore')
 # 数据加载
-df = pd.read_csv('/Users/xiaodong/Gitroot/tools/gk-data-analysis/bitcoin/bitcoin_2012-01-01_to_2018-10-31.csv')
+df = pd.read_csv('../tools/gk-data-analysis/bitcoin/bitcoin_2012-01-01_to_2018-10-31.csv')
 # 将时间作为 df 的索引
 df.Timestamp = pd.to_datetime(df.Timestamp)
 df.index = df.Timestamp
