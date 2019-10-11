@@ -51,28 +51,44 @@ df2.iloc[3,0] = np.NaN
 print(df2)
 
 
-from sklearn.preprocessing import Imputer
+# from sklearn.preprocessing import Imputer
+# imp = Imputer(missing_values="NaN", strategy='mean', axis=0, copy=True)
 
-imp = Imputer(missing_values="NaN", strategy='mean', axis=0, copy=True)
+from sklearn.impute import SimpleImputer
+imp = SimpleImputer(missing_values=np.NaN, strategy='mean', copy=True)
 
-df21 = imp.fit(df2)
+imp_mean = imp.fit(df2)
+df21 = imp_mean.transform(df2)
 
+print("df2's NaN were filled by SimpleImputer as below: ")
 print(df21)
-
-
-imp.statistics_
-
-imp.transform(df21)
-
+print('='*100)
 
 from sklearn.preprocessing import LabelEncoder
 
 df3 = np.random.randint(0, high=100, size=5)
+print("df3 oringinally is: ")
 print(df3)
 
-le = labelEncoder()
+le = LabelEncoder()
 le.fit(df3)
 le.classes_
 df4 = le.transform(df3)
+print("after LabelEncoder, df3 changed to: ")
 print(df4)
+print('='*100)
+
+# 另外一个例子
+le2 = LabelEncoder()
+le2.fit([1,2,2,6])
+print(le.classes_)
+s1 = [1,1,2,6]
+s1_encoded = le2.transform([1,1,2,6])
+print("s1 after encoding is: \n", s1_encoded)
+s11 = le2.inverse_transform(s1_encoded)
+print("now s11 is: \n", s11)
+print('='*100)
+
+
+
 
