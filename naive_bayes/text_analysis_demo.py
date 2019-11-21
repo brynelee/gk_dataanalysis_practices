@@ -73,9 +73,11 @@ print(u"\n\n数据分析:")
 X = X.toarray()
 
 x_train = X[:10]
-print("x_train ", x_train)
+print("x_train: ")
+print(x_train)
 x_test = X[10:]
-print("x_test is ", x_test)
+print("x_test is ",)
+print(x_test)
 #1表示好评 0表示差评
 y_train = [1,1,0,0,1,0,0,1,0,0]
 y_test = [1,0]
